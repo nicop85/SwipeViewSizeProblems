@@ -1,0 +1,9 @@
+﻿namespace SwipeViewSizeProblems;
+
+public partial class AppShell : Shell
+{
+	public AppShell()
+	{
+		InitializeComponent();
+	}
+}

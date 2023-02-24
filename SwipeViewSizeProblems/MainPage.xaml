@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SwipeViewSizeProblems.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <SwipeView x:Name="swipeControl">
+                <SwipeView.RightItems>
+                    <SwipeItems>
+                        <SwipeItemView BackgroundColor="CornflowerBlue">
+                            <Grid Margin="10" HorizontalOptions="Fill" VerticalOptions="Fill">
+                                <Image Source="trash.png" HeightRequest="25"
+                                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                            </Grid>
+                        </SwipeItemView>
+                    </SwipeItems>
+                </SwipeView.RightItems>
+
+                <!-- Content -->
+                <Grid HeightRequest="60"
+                      WidthRequest="300"
+                      BackgroundColor="LightGray">
+                    <Label Text="Swipe right"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                </Grid>
+            </SwipeView>
+
+            <Button
+                x:Name="toggleSwipe"
+                Text="Open/Close swipe"
+                Clicked="OnButtonClicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
